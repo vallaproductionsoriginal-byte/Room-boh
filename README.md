@@ -2,6 +2,8 @@
 
 Riverbero VST3 gratuito per **Mac Apple Silicon**, macOS 11 o successivo.
 
+Autore: **Francesco Valla**.
+
 ![Interfaccia di Room-boh](docs/interface.png)
 
 ## Download
