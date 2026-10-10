@@ -1,0 +1,11 @@
+# Only the reviewed binary-release documentation is published.
+*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/THIRD_PARTY_NOTICES.md
+!/CHANGELOG.md
+!/licenses/
+!/licenses/**
+!/docs/
+!/docs/interface.png

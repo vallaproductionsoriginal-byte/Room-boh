@@ -1,0 +1,31 @@
+Room-boh Freeware Licence
+Copyright (c) 2026 Francesco. All rights reserved.
+
+1. Permission
+You may download, install and use Room-boh free of charge, for personal,
+educational, professional and commercial audio production. You retain your
+rights in audio and music created using the plugin; no attribution or royalty
+is required for that output.
+
+2. Redistribution
+You may redistribute the complete, unmodified Room-boh binary package free of
+charge, provided that this licence and all third-party notices accompany it.
+No permission is granted to sell Room-boh, remove notices, rebrand the plugin,
+modify its application code, or relicense it. Other rights require permission
+from the copyright holder, except where applicable law provides otherwise.
+
+3. Source code and third-party components
+Room-boh is distributed as a binary application with private source code.
+This licence grants no right to receive the application source code.
+The incorporated third-party components retain their separate copyrights and
+licences, described in THIRD_PARTY_NOTICES.md and the accompanying licences.
+Nothing in this licence limits rights independently granted by those licences.
+JUCE is used by the publisher under the JUCE 9 commercial Starter licence.
+
+4. Disclaimer
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW,
+THE COPYRIGHT HOLDER IS NOT LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
+ARISING FROM THE SOFTWARE OR ITS USE. RIGHTS AND LIABILITIES THAT CANNOT LAWFULLY
+BE EXCLUDED REMAIN UNAFFECTED.
