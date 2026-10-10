@@ -35,8 +35,8 @@ Sono disponibili configurazioni mono, stereo e ingresso mono con uscita stereo. 
 
 ## Licenza
 
-Room-boh è **freeware a sorgente privato**: puoi utilizzarlo gratuitamente anche per produzioni audio commerciali. La ridistribuzione del pacchetto completo e inalterato è consentita gratuitamente. Le condizioni sono in [LICENSE](LICENSE).
+Il codice e il materiale originali di Room-boh sono concessi sotto **licenza MIT**, riportata in [LICENSE](LICENSE). La MIT permette uso, copia, modifica, distribuzione e vendita, mantenendo l'avviso di copyright e la licenza. La release pubblica contiene il plugin compilato; i sorgenti rimangono privati.
 
-La distribuzione usa la licenza commerciale JUCE Starter. JUCE e le altre dipendenze conservano i propri termini e avvisi, riportati in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) e nella cartella [licenses](licenses).
+La distribuzione usa la licenza commerciale JUCE Starter. La MIT di Room-boh non si applica ai componenti di terze parti: JUCE e le altre dipendenze conservano i propri termini e avvisi, riportati in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) e nella cartella [licenses](licenses).
 
 Per segnalare problemi, apri una issue indicando DAW, versione macOS, frequenza di campionamento e passaggi per riprodurre il problema.
