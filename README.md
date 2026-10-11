@@ -1,24 +1,24 @@
 # Room-boh
 
-Riverbero VST3 gratuito per **Mac Apple Silicon**, macOS 11 o successivo.
+Riverbero VST3 e Audio Unit gratuito per **Mac Apple Silicon**, macOS 11 o successivo.
 
-Autore: **Francesco Valla**.
+Produttore: **Valla Productions**.
 
 ![Interfaccia di Room-boh](docs/interface.png)
 
 ## Download
 
-Scarica **Room-boh-mac-arm64.zip** dalla [release più recente](https://github.com/vallaproductionsoriginal-byte/Room-boh/releases/latest). Il file `SHA256SUMS.txt` permette di verificare l'integrità dello ZIP.
+Scarica **Room-boh-mac-arm64.zip** dalla [release più recente](https://github.com/vallaproductionsoriginal-byte/Room-boh/releases/latest). Lo ZIP contiene **Room-boh.vst3** e **Room-boh.component** (Audio Unit). Il file `SHA256SUMS.txt` permette di verificare l'integrità dello ZIP.
 
 ## Installazione
 
 1. Estrai completamente lo ZIP e chiudi la DAW.
-2. Copia `Room-boh.vst3` in `~/Library/Audio/Plug-Ins/VST3/`. In alternativa esegui `Install.command` dalla cartella estratta.
-3. Riapri la DAW e aggiorna la scansione VST3.
+2. Copia `Room-boh.vst3` in `~/Library/Audio/Plug-Ins/VST3/` e/o `Room-boh.component` in `~/Library/Audio/Plug-Ins/Components/`. In alternativa esegui `Install.command` dalla cartella estratta per installare entrambi i formati.
+3. Riapri la DAW e aggiorna la scansione dei plugin. Se l'Audio Unit non compare, riavvia il Mac e ripeti la scansione.
 
-Serve una DAW con supporto VST3 eseguita nativamente su Apple Silicon. Il bundle ha una firma ad hoc locale ed è privo di notarizzazione Apple; macOS può richiedere ulteriori verifiche o bloccarne il caricamento.
+Serve una DAW con supporto VST3 o Audio Unit eseguita nativamente su Apple Silicon. I bundle hanno una firma ad hoc locale e sono privi di notarizzazione Apple; macOS può richiedere ulteriori verifiche o bloccarne il caricamento.
 
-Per disinstallarlo, chiudi la DAW ed elimina `Room-boh.vst3` dalla cartella di installazione.
+Per disinstallarlo, chiudi la DAW ed elimina `Room-boh.vst3` e/o `Room-boh.component` dalle rispettive cartelle di installazione.
 
 ## Controlli
 
@@ -33,7 +33,7 @@ Mix a 100% per un bus ausiliario. Depth bilancia le riflessioni iniziali e la co
 
 ## Compatibilità
 
-Sono disponibili configurazioni mono, stereo e ingresso mono con uscita stereo. Il percorso dry ha latenza zero. Tutti i ventitré parametri sono esposti alla DAW e vengono salvati nella sessione. Il caricamento VST3 e l'audio sono stati verificati in un host JUCE locale a 44.1, 48, 96 e 192 kHz; la compatibilità può variare tra DAW.
+Sono disponibili configurazioni mono, stereo e ingresso mono con uscita stereo. Il percorso dry ha latenza zero. Tutti i ventitré parametri sono esposti alla DAW e vengono salvati nella sessione. Il caricamento VST3 e Audio Unit, l'audio, i preset, lo stato e la creazione dell'editor sono stati verificati in un host JUCE locale a 44.1, 48, 96 e 192 kHz; la compatibilità può variare tra DAW.
 
 ## Licenza
 
