@@ -2,6 +2,7 @@
 
 ## 1.0.3 — 2026-10-11
 
+- Pacchetto VST3 Windows x64 aggiunto alla stessa release, con runtime MSVC statico e verifica nativa su Windows.
 - Aggiunta la versione Audio Unit (`Room-boh.component`) nello stesso pacchetto del VST3.
 - Installer e istruzioni aggiornati per entrambi i formati.
 - Il preset corrente viene notificato all'host anche quando viene ripristinato lo stato della sessione.

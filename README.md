@@ -1,6 +1,6 @@
 # Room-boh
 
-Riverbero VST3 e Audio Unit gratuito per **Mac Apple Silicon**, macOS 11 o successivo.
+Riverbero gratuito: VST3 per **Windows x64** e **Mac Apple Silicon**, Audio Unit per Mac.
 
 Produttore: **Valla Productions**.
 
@@ -8,9 +8,24 @@ Produttore: **Valla Productions**.
 
 ## Download
 
-Scarica **Room-boh-mac-arm64.zip** dalla [release più recente](https://github.com/vallaproductionsoriginal-byte/Room-boh/releases/latest). Lo ZIP contiene **Room-boh.vst3** e **Room-boh.component** (Audio Unit). Il file `SHA256SUMS.txt` permette di verificare l'integrità dello ZIP.
+Scarica il pacchetto adatto al tuo sistema dalla [release 1.0.3](https://github.com/vallaproductionsoriginal-byte/Room-boh/releases/tag/v1.0.3):
+
+- **Room-boh-win-x64.zip**: Windows 10/11 a 64 bit, VST3.
+- **Room-boh-mac-arm64.zip**: Mac Apple Silicon, macOS 11 o successivo, VST3 e Audio Unit.
+
+Il file `SHA256SUMS.txt` permette di verificare l'integrità di entrambi gli ZIP.
 
 ## Installazione
+
+### Windows x64
+
+1. Estrai completamente `Room-boh-win-x64.zip` e chiudi la DAW.
+2. Copia l'intera cartella `Room-boh.vst3` in `C:\Program Files\Common Files\VST3\`, mantenendo la struttura del bundle. Windows può richiedere i privilegi di amministratore.
+3. Riapri la DAW a 64 bit e aggiorna la scansione VST3. Il produttore è **Valla Productions**.
+
+Il runtime MSVC è incluso staticamente. Per disinstallarlo, chiudi la DAW ed elimina la cartella del plugin.
+
+### Mac Apple Silicon
 
 1. Estrai completamente lo ZIP e chiudi la DAW.
 2. Copia `Room-boh.vst3` in `~/Library/Audio/Plug-Ins/VST3/` e/o `Room-boh.component` in `~/Library/Audio/Plug-Ins/Components/`. In alternativa esegui `Install.command` dalla cartella estratta per installare entrambi i formati.
@@ -33,7 +48,7 @@ Mix a 100% per un bus ausiliario. Depth bilancia le riflessioni iniziali e la co
 
 ## Compatibilità
 
-Sono disponibili configurazioni mono, stereo e ingresso mono con uscita stereo. Il percorso dry ha latenza zero. Tutti i ventitré parametri sono esposti alla DAW e vengono salvati nella sessione. Il caricamento VST3 e Audio Unit, l'audio, i preset, lo stato e la creazione dell'editor sono stati verificati in un host JUCE locale a 44.1, 48, 96 e 192 kHz; la compatibilità può variare tra DAW.
+Sono disponibili configurazioni mono, stereo e ingresso mono con uscita stereo. Il percorso dry ha latenza zero. Tutti i ventitré parametri sono esposti alla DAW e vengono salvati nella sessione. DSP, caricamento VST3, audio, preset, stato ed editor sono verificati su un runner Windows x64 e in un host JUCE locale Mac a 44.1, 48, 96 e 192 kHz; Audio Unit è verificato su Mac; la compatibilità può variare tra DAW.
 
 ## Licenza
 
@@ -41,4 +56,4 @@ Il codice e il materiale originali di Room-boh sono concessi sotto **licenza MIT
 
 La distribuzione usa la licenza commerciale JUCE Starter. La MIT di Room-boh non si applica ai componenti di terze parti: JUCE e le altre dipendenze conservano i propri termini e avvisi, riportati in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) e nella cartella [licenses](licenses).
 
-Per segnalare problemi, apri una issue indicando DAW, versione macOS, frequenza di campionamento e passaggi per riprodurre il problema.
+Per segnalare problemi, apri una issue indicando DAW, versione del sistema operativo, frequenza di campionamento e passaggi per riprodurre il problema.
