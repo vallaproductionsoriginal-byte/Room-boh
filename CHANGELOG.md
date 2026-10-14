@@ -1,5 +1,9 @@
 # Changelog
 
+## Non pubblicato — 2026-10-15
+
+- Licenza del codice e del materiale originali di Room-boh aggiornata da MIT a proprietaria; titolare Francesco Valla e contatto vallaproductionsoriginal@gmail.com. Le dipendenze mantengono le proprie licenze.
+
 ## 1.0.3 — 2026-10-11
 
 - Pacchetto VST3 Windows x64 aggiunto alla stessa release, con runtime MSVC statico e verifica nativa su Windows.

@@ -52,8 +52,8 @@ Sono disponibili configurazioni mono, stereo e ingresso mono con uscita stereo. 
 
 ## Licenza
 
-Il codice e il materiale originali di Room-boh sono concessi sotto **licenza MIT**, riportata in [LICENSE](LICENSE). La MIT permette uso, copia, modifica, distribuzione e vendita, mantenendo l'avviso di copyright e la licenza. La release pubblica contiene il plugin compilato; i sorgenti rimangono privati.
+Il codice e il materiale originali di Room-boh sono soggetti alla **licenza proprietaria** riportata in [LICENSE](LICENSE). Copyright (c) 2026 Francesco Valla. Tutti i diritti riservati. L'uso, anche commerciale, richiede l'autorizzazione espressa del titolare ed è consentito nei limiti del permesso accordato. Modifica, redistribuzione, sublicenza e rivendita richiedono il suo previo consenso scritto. Per le richieste: [vallaproductionsoriginal@gmail.com](mailto:vallaproductionsoriginal@gmail.com). La release pubblica contiene il plugin compilato; i sorgenti sono riservati e accessibili solo alle persone autorizzate.
 
-La distribuzione usa la licenza commerciale JUCE Starter. La MIT di Room-boh non si applica ai componenti di terze parti: JUCE e le altre dipendenze conservano i propri termini e avvisi, riportati in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) e nella cartella [licenses](licenses).
+La distribuzione usa la licenza commerciale JUCE Starter. La licenza proprietaria di Room-boh non si applica ai componenti di terze parti: JUCE e le altre dipendenze conservano i propri termini e avvisi, riportati in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) e nella cartella [licenses](licenses).
 
 Per segnalare problemi, apri una issue indicando DAW, versione del sistema operativo, frequenza di campionamento e passaggi per riprodurre il problema.

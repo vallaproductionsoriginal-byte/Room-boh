@@ -1,6 +1,6 @@
 # Third-party notices
 
-Room-boh incorporates object code from the components listed below. Their copyrights and licence terms remain with their respective owners. The MIT licence in `LICENSE` applies to the original Room-boh code and accompanying original material. Third-party components are excluded from that grant and remain subject to their own licences; their independently granted rights are not restricted by the Room-boh licence.
+Room-boh incorporates object code from the components listed below. Their copyrights and licence terms remain with their respective owners. The proprietary licence in `LICENSE` applies to the original Room-boh code and accompanying original material. Third-party components are excluded from that licence and remain subject to their own licences; their independently granted rights are not restricted by the Room-boh licence.
 
 ## JUCE Framework 9.0.3
 
