@@ -27,11 +27,52 @@ Il runtime MSVC è incluso staticamente. Per disinstallarlo, chiudi la DAW ed el
 
 ### Mac Apple Silicon
 
-1. Estrai completamente lo ZIP e chiudi la DAW.
-2. Copia `Room-boh.vst3` in `~/Library/Audio/Plug-Ins/VST3/` e/o `Room-boh.component` in `~/Library/Audio/Plug-Ins/Components/`. In alternativa esegui `Install.command` dalla cartella estratta per installare entrambi i formati.
-3. Riapri la DAW e aggiorna la scansione dei plugin. Se l'Audio Unit non compare, riavvia il Mac e ripeti la scansione.
+Serve un **Mac con chip Apple Silicon (serie M)**, macOS 11 o successivo e una DAW con supporto VST3 o Audio Unit avviata nativamente, senza Rosetta. Questa versione non è compatibile con i Mac Intel. Per controllare il chip, apri il menu ** > Informazioni su questo Mac**.
 
-Serve una DAW con supporto VST3 o Audio Unit eseguita nativamente su Apple Silicon. I bundle hanno una firma ad hoc locale e sono privi di notarizzazione Apple; macOS può richiedere ulteriori verifiche o bloccarne il caricamento.
+**Il plugin non è firmato con un certificato Apple Developer ID e non è notarizzato da Apple.** È presente una firma locale ad hoc, che non identifica lo sviluppatore presso Apple: per questo macOS può bloccare l'installazione o il primo caricamento nella DAW. Segui i passaggi qui sotto per autorizzarlo. Per installare il plugin non servono Xcode né un account sviluppatore.
+
+#### Installazione passo passo
+
+1. Scarica **Room-boh-mac-arm64.zip** dalla [release ufficiale](https://github.com/vallaproductionsoriginal-byte/Room-boh/releases/tag/v1.0.3) e fai doppio clic sullo ZIP per estrarlo.
+2. Chiudi completamente la DAW (il programma con cui lavori all'audio, ad esempio Logic Pro, Ableton Live o REAPER).
+3. Apri il **Finder**, premi **Maiuscole + ⌘ + G** (menu **Vai > Vai alla cartella…**), incolla `~/Library/Audio/Plug-Ins/VST3/` e premi Invio. Copia qui **Room-boh.vst3** dalla cartella estratta.
+4. Per usare anche l'**Audio Unit**, richiesto da Logic Pro, ripeti il passaggio con `~/Library/Audio/Plug-Ins/Components/` e copia qui **Room-boh.component**. Puoi installare entrambi i formati o soltanto quello usato dalla tua DAW.
+5. Riapri la DAW e avvia una nuova scansione dei plugin dalle sue impostazioni. Cerca **Room-boh**, produttore **Valla Productions**. I file `.vst3` e `.component` si caricano nella DAW: non si aprono come applicazioni autonome.
+
+Il simbolo `~` indica la tua cartella utente. Se una cartella di destinazione manca, apri `~/Library/` nel Finder e crea le cartelle mancanti nella sequenza **Audio > Plug-Ins > VST3** oppure **Audio > Plug-Ins > Components**, rispettando i nomi.
+
+**Alternativa automatica:** dalla cartella estratta puoi fare doppio clic su **Install.command**. Si apre Terminale e lo script copia entrambi i formati nelle stesse cartelle, conservando una copia di eventuali versioni precedenti. Se macOS blocca lo script, usa la procedura seguente oppure l'installazione manuale appena descritta.
+
+#### Se macOS segnala “sviluppatore non verificato” o “Apple non può verificare…”
+
+Questa procedura vale per **Install.command** e per il plugin quando viene bloccato durante la scansione della DAW. Autorizza soltanto i file scaricati dalla release ufficiale di Room-boh.
+
+1. Dopo il tentativo di apertura o scansione, chiudi l'avviso con **Fine** o **Annulla**.
+2. Apri ** > Impostazioni di Sistema > Privacy e sicurezza** e scorri fino alla sezione **Sicurezza**. Accanto al messaggio relativo a Room-boh o a Install.command, premi **Apri comunque**. Nelle versioni meno recenti di macOS il percorso è **Preferenze di Sistema > Sicurezza e Privacy > Generali**.
+3. Conferma con la password del Mac o Touch ID, se richiesto, e premi **Apri** nell'eventuale nuovo avviso. Se hai autorizzato l'installer, lascia terminare l'installazione.
+4. Chiudi e riapri la DAW, quindi ripeti la scansione. Se installi entrambi i formati, macOS può chiedere di autorizzarli separatamente.
+
+Il pulsante compare dopo un tentativo bloccato; se manca, riprova ad aprire lo script o a scansionare il plugin. Riferimento: [guida ufficiale Apple per aprire software non autenticato](https://support.apple.com/it-it/102445).
+
+#### Se il plugin resta bloccato e “Apri comunque” non compare
+
+Dopo aver copiato il plugin nelle cartelle indicate sopra, chiudi la DAW e apri **Terminale** cercandolo con **⌘ + Spazio**. Per la copia scaricata dalla release ufficiale, incolla il comando del formato che hai installato e premi Invio. Se li hai installati entrambi, esegui entrambi i comandi, uno alla volta.
+
+**VST3:**
+
+```sh
+xattr -dr com.apple.quarantine "$HOME/Library/Audio/Plug-Ins/VST3/Room-boh.vst3"
+```
+
+**Audio Unit:**
+
+```sh
+xattr -dr com.apple.quarantine "$HOME/Library/Audio/Plug-Ins/Components/Room-boh.component"
+```
+
+Questi comandi rimuovono l'attributo di quarantena soltanto dai bundle di Room-boh indicati, lasciando attive le protezioni generali di macOS. Non richiedono `sudo` né la password. Se compare `No such file or directory`, verifica di aver copiato il formato corrispondente nella cartella corretta.
+
+Riapri la DAW e ripeti la scansione; se il plugin era stato escluso, usa la funzione della DAW per ripetere la verifica dei plugin non caricati. Se l'Audio Unit non compare ancora, riavvia il Mac e ripeti la scansione. Se macOS segnala un file danneggiato, scarica nuovamente lo ZIP ufficiale e reinstallalo prima di riprovare.
 
 Per disinstallarlo, chiudi la DAW ed elimina `Room-boh.vst3` e/o `Room-boh.component` dalle rispettive cartelle di installazione.
 
